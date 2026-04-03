@@ -1,0 +1,46 @@
+# Waylay — gitignore
+
+# Runtime data
+data/
+*.db
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+venv/
+.venv/
+
+# Secrets / OAuth tokens
+credentials.json
+token.json
+microsoft_token.json
+*.pickle
+
+# Models (large binary files — download separately)
+models/
+*.onnx
+*.onnx.json
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+waylay.log
+waylay_error.log
+ollama.log

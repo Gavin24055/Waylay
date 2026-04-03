@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Unique identifier for this Launch Agent -->
+    <key>Label</key>
+    <string>com.waylay.assistant</string>
+
+    <!-- Script to run -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/gavin.p/jarvis/waylay_start.sh</string>
+    </array>
+
+    <!-- Start automatically on login -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- Restart if it crashes -->
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Wait 10s before restarting on crash (avoid tight restart loops) -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+
+    <!-- Log paths -->
+    <key>StandardOutPath</key>
+    <string>/Users/gavin.p/jarvis/data/waylay.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/gavin.p/jarvis/data/waylay_error.log</string>
+
+    <!-- Run as the current user (not root) -->
+    <key>UserName</key>
+    <string>gavin.p</string>
+
+    <!-- Environment: PATH so 'ollama', 'python3' etc resolve correctly -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/Users/gavin.p/.local/bin</string>
+        <key>HOME</key>
+        <string>/Users/gavin.p</string>
+    </dict>
+</dict>
+</plist>
